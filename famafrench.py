@@ -88,7 +88,7 @@ def factor_inverse(factor):
 
 def plot_factor_hists(ff: str, ma: str) -> None:
     f: str = lookup_factors[ff]
-    periods = [(1960, 1980), (1980, 2007), (2007, 2020)]
+    periods = [(1960, 1980), (1980, 2007), (2007, 2025)]
     plt.figure(figsize=(9, 5))
     plt.gca().xaxis.set_major_formatter(mtick.FormatStrFormatter('%.0f bp'))
     for s, e in periods:
@@ -203,7 +203,7 @@ def draw_R2_hist(pname, daterange):
 
 @functools.lru_cache(maxsize=128, typed=False)
 def estimate_R2_series(pname):
-    years = list(range(1960, 2021))
+    years = list(range(1960, 2025))
     factor_scenarios = ['MER', 'SMB', 'HML', 'RMW', 'CMA', 'MER+SMB+HML', 'MER+SMB+HML+RMW+CMA']
     from collections import defaultdict
     XXX = list()
