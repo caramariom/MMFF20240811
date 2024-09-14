@@ -209,7 +209,7 @@ def estimate_R2_series(pname):
     XXX = list()
     YYY = defaultdict(list)
     for iYear, year in enumerate(years):
-        daterange = str(year - 10), str(year)
+        daterange = str(year - 12), str(year)
         ret_actual = get_actual_returns(pname, daterange)
         if len(ret_actual) < 5:
             continue
